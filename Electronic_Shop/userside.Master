@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="userside.Master.cs" Inherits="Electronic_Shop.userside" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap & Custom CSS -->
+    <link rel="shortcut icon" href="<%= ResolveUrl("~/favicon.png") %>" />
+    <link href="<%= ResolveUrl("~/css/bootstrap.min.css") %>" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/css/tiny-slider.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/css/style.css") %>" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Navigation Bar -->
+        <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="<%= ResolveUrl("~/dashboard.aspx") %>">Electronic Shop<span>.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsElectronicShop">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsElectronicShop">
+                    <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                        <li id="liHome" runat="server" class="nav-item"><a class="nav-link" href="<%= ResolveUrl("~/dashboard.aspx") %>">Home</a></li>
+                        <li id="liShop" runat="server" class="nav-item"><a class="nav-link" href="<%= ResolveUrl("~/product.aspx") %>">Shop</a></li>
+                        <li id="liAbout" runat="server" class="nav-item"><a class="nav-link" href="<%= ResolveUrl("~/about.aspx") %>">About us</a></li>
+                        <li id="liService" runat="server" class="nav-item"><a class="nav-link" href="<%= ResolveUrl("~/service.aspx") %>">Services</a></li>
+                        <li id="liContact" runat="server" class="nav-item"><a class="nav-link" href="<%= ResolveUrl("~/contact.aspx") %>">Contact us</a></li>
+                    </ul>
+                    <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                        <asp:Literal ID="litUserOptions" runat="server" />
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Page Content Placeholder -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+        <!-- Footer -->
+        <!-- (same footer as before) -->
+
+        <!-- Scripts -->
+        <script src="<%= ResolveUrl("~/js/bootstrap.bundle.min.js") %>"></script>
+        <script src="<%= ResolveUrl("~/js/tiny-slider.js") %>"></script>
+        <script src="<%= ResolveUrl("~/js/custom.js") %>"></script>
+    </form>
+</body>
+</html>
