@@ -1,9 +1,13 @@
 **⚡ Electronic-Shop-Management-System**
 
+
 Electronic shops often struggle with managing diverse product categories, tracking customer orders, and ensuring smooth billing and delivery. A centralized system is needed to streamline operations and improve customer satisfaction.
 
+
 **Objective**
+
 Provide a unified platform to manage inventory, sales, and customer interactions with clear traceability and analytics.
+
 
 **Expected Outcome**
 
